@@ -1,0 +1,144 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-02-06T20:47:34.153Z",
+    "end": "2025-02-06T20:47:40.327Z",
+    "duration": 6174,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "c9eb5979-fde2-44a8-b9b4-010b0d451afd",
+      "title": "",
+      "fullFile": "cypress\\e2e\\rancher-ui.cy.js",
+      "file": "cypress\\e2e\\rancher-ui.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "3fb0804c-c312-4979-a4e1-bd27dea282ad",
+          "title": "Rancher UI Automation",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Logs into the Rancher web page",
+              "fullTitle": "Rancher UI Automation Logs into the Rancher web page",
+              "timedOut": null,
+              "duration": 4444,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Enter login credentials (update with valid credentials)\ncy.get('input[data-testid=\"local-login-username\"]').type('admin');\ncy.get('input[type=\"password\"]').type('QG9cb9mNRS8H9WpS');\n// Click the login button\ncy.get('button[type=\"submit\"]').click();\n// Verify successful login by checking if the dashboard is loaded\ncy.url().should('include', '/dashboard');",
+              "err": {},
+              "uuid": "9a23d1ad-4cb5-460a-ab4d-1d60e89935e5",
+              "parentUUID": "3fb0804c-c312-4979-a4e1-bd27dea282ad",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Checks if the main web page opens up",
+              "fullTitle": "Rancher UI Automation Checks if the main web page opens up",
+              "timedOut": null,
+              "duration": 675,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Ensure the login page is accessible\ncy.get('h1').should('contain', 'Welcome to Rancher');",
+              "err": {},
+              "uuid": "aa5d6fff-ff57-4cf8-8b47-c1233abd582a",
+              "parentUUID": "3fb0804c-c312-4979-a4e1-bd27dea282ad",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Checks if the main web page title is correct",
+              "fullTitle": "Rancher UI Automation Checks if the main web page title is correct",
+              "timedOut": null,
+              "duration": 770,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Verify the page title\ncy.title().should('eq', 'Rancher');",
+              "err": {},
+              "uuid": "4c48a5f1-5b2b-49b0-8fbf-9b0bb7c77686",
+              "parentUUID": "3fb0804c-c312-4979-a4e1-bd27dea282ad",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "9a23d1ad-4cb5-460a-ab4d-1d60e89935e5",
+            "aa5d6fff-ff57-4cf8-8b47-c1233abd582a",
+            "4c48a5f1-5b2b-49b0-8fbf-9b0bb7c77686"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 5889,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress\\reports\\.jsons",
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "charts": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
