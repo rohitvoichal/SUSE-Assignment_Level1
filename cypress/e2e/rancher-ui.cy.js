@@ -2,7 +2,7 @@ describe('Rancher UI Automation', () => {
   beforeEach(() => {
       // Visit the Rancher login page
       cy.visit('https://localhost/dashboard/auth/login', {
-          failOnStatusCode: false // Bypass self-signed SSL certificate issues
+          failOnStatusCode: false
       });
   });
 
